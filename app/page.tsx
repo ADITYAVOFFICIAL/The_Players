@@ -144,7 +144,7 @@ export default function Home() {
     },
     {
       position: "Sponsorship & Operations Head",
-      name: "Harsh Singh",
+      name: "Harsh Sharma",
       symbol: "△",
       image: "./har.jpeg", // <-- Replace with actual path
     },
