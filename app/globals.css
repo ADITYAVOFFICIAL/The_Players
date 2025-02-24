@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Squid';
+  src: url('https://fonts.cdnfonts.com/css/game-of-squids') format('woff2');
+}
+
+:root {
+  --neon-pink: #FF0676;
+  --neon-cyan: #00F0FF;
+  --dark-bg: #0A0A0A;
+}
+
+body {
+  background: #0A0A0A;
+  min-height: 100vh;
+  color: white;
+  font-family: 'Squid', sans-serif;
+}
+
+.geometric-pattern {
+  position: fixed;
+  inset: 0;
+  background: 
+    linear-gradient(45deg, rgba(255, 6, 118, 0.1) 0%, transparent 40%),
+    linear-gradient(-45deg, rgba(0, 240, 255, 0.1) 0%, transparent 40%);
+  z-index: -1;
+}
+
+.geometric-shapes {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 2px solid;
+  opacity: 0.3;
+}
+
+.shape-circle {
+  border-color: var(--neon-pink);
+  border-radius: 50%;
+}
+
+.shape-triangle {
+  border-color: var(--neon-cyan);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.shape-square {
+  border-color: white;
+}
+
+.contestant-card {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+}
+
+.contestant-card:hover {
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 20px rgba(255, 6, 118, 0.3);
+}
+
+.contestant-content {
+  transform: rotate(-45deg);
+}
+
+.neon-text {
+  text-shadow: 0 0 10px currentColor,
+               0 0 20px currentColor,
+               0 0 30px currentColor;
+}
+
+.player-number {
+  font-family: 'Squid', monospace;
+  color: var(--neon-cyan);
+  font-size: 2rem;
+  letter-spacing: 0.2em;
+  text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.countdown-container {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 6, 118, 0.3);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.countdown-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, 
+    rgba(255, 6, 118, 0.1),
+    rgba(0, 240, 255, 0.1)
+  );
+  z-index: -1;
+}
+@font-face {
+  font-family: 'Squid';
+  src: url('/squid.ttf') format('truetype');
+}
+
+.contestant-text {
+  font-family: 'Squid', sans-serif;
+}
