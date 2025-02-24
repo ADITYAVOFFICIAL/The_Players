@@ -51,7 +51,7 @@ export default function Home() {
   const [showContestants, setShowContestants] = useState(false);
   const [showContestantButton, setShowContestantButton] = useState(true);
 
-  const targetDate = new Date("2025-02-24T21:00:00");
+  const targetDate = new Date("2025-02-24T16:00:00");
 
   const bg1Ref = useRef<HTMLAudioElement>(null);
   const bg2Ref = useRef<HTMLAudioElement>(null);
@@ -152,7 +152,7 @@ export default function Home() {
       position: "Editorial Head",
       name: "Ashmit Singh",
       symbol: "△",
-      image: "", // <-- Replace with actual path
+      image: "./as.jpeg", // <-- Replace with actual path
     },
     {
       position: "R&D lead",
